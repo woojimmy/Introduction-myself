@@ -1,0 +1,456 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0 10px ;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(21, 22, 29);
+}
+
+.container {
+    max-width: 1000px;
+    min-width: none;
+    margin: 20px auto;
+    height: 90vh;
+    max-height: 100%;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+
+}
+/* ------------header---------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding: 6px 15px;
+    background-color: rgba(116, 113, 141, 0.322);
+}
+
+.wecode {
+    padding: 10px;
+    width: 160px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+
+header > ul {
+    display: flex;
+}
+
+
+header > ul > li {
+    list-style-type: none;
+    margin-left: 0px;
+}
+
+header > ul > li > a{
+    text-decoration: none;
+    color: cornflowerblue;
+    font-weight: 850;
+    padding: 0;
+}
+
+header > ul > li > a:hover {
+    border-bottom: 2px solid cornflowerblue;
+    padding: 0;
+    color: rgba(255, 255, 255, 0.568);
+}
+
+@media screen and (max-width:700px) {
+    header {
+        flex-direction: column;
+        padding-top: 0%;
+    }
+}
+
+/* -----------home image------------ */
+.backgroundImg {
+    height: 100%;
+    min-height: 100px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    filter: brightness(45%);
+    overflow: hidden;
+    margin: 2px;
+}
+
+
+/* ---------about image--------- */
+.picSize {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 40vmax;  
+    top: 5%;
+}
+
+
+.flower, .icecream {
+    padding: 0;
+    box-shadow: 10px 10px 10px rgba(124, 125, 131, 0.479);
+    animation: fadeIn 1.2s;
+    width: 50vmax;
+    
+}
+
+.flower {
+    left: -10px;
+    top: -20px;
+    max-width: 15vmax;
+    height: auto;
+    transform: rotate(-15deg);
+}
+
+.icecream {
+    left: 150px;
+    top: -100px;
+    max-width: 12vmax;
+    height: auto;
+    transform: rotate(10deg);
+    filter: brightness(110%);
+}
+
+
+
+/*-------------fav image------*/
+
+.photo {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    padding: 0;
+    width: auto;
+    height: 62%;
+    border-radius: 10px;
+    filter: brightness(30%);
+    margin-top: 0.4%;
+}
+.favPics {
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    padding: 0%;
+    overflow: hidden;
+}
+
+.traPics1, .traPics2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.favPics>div>img {
+    width: 28vmin;
+    height: auto;
+    padding: 0%;
+    box-shadow: 2px 2px 2px rgba(255, 255, 255, 0.322);
+    border-radius: 10px;
+    animation: fadeIn 1.5s forwards;
+}
+/*----------section ------------*/
+section {
+    width:100%;
+    height: 70%;
+    margin: auto;
+}
+/*----------home section ------------*/
+.greeting {
+    text-align: left;
+    font-size: 4.5vmin;
+}
+
+.myName {
+    text-align: left;
+    color: powderblue;
+    animation: change 1.5s ease forwards;
+    font-size: 5.5vmin;
+}
+.shortIntro {
+    text-align: left;
+    animation: fadeIn 1.5s forwards;
+    animation-duration: 6s;
+    font-size: 2.8vmin;
+    width: 40vmin;
+}
+
+
+/*-------animation---------*/
+
+@keyframes change {
+    from {
+        transform: translateX(20%);
+        overflow: hidden;
+    }
+
+    to {
+        transform: translateX(0%);
+        overflow: hidden;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+.sectionHome>.Introduce {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -80%);
+}
+
+@media screen and (max-width:700px) {
+    .Introduce {
+        max-width: 40vmax;
+    }
+    .greeting {
+        font-size: 4.5vmin;
+    }
+    .myName {
+        font-size: 5.5vmin;
+    }
+
+    .shortIntro {
+        font-size: 2.8vmin;
+    }
+    button {
+        font-size: 2vmin;
+        max-width: 50vmin;
+    }
+}
+
+
+.sectionHome>.Introduce, button {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.705);
+    font-weight: bold;
+}
+
+.sectionHome>button {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 200%);
+    background-color: rgba(255, 255, 255, 0.322);
+    border: 3px solid cornflowerblue;
+    padding: 10px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+/*-----------about section----------*/
+.secAbout { 
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.conAbout {
+    color: rgba(255, 255, 255, 0.705);
+    overflow: hidden;
+    line-height: 160%;
+    margin-top: 10%;
+    width: 80vmin;
+    text-align: center;
+}
+
+.conAbout>p:nth-child(1){
+    color: rgba(100, 148, 237, 0.788);
+    font-size: large;
+    font-weight: bold;
+}
+.conAbout>p:last-child{
+    border-right: 3px solid rgba(255, 255, 255, 0.432);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.432);
+    border-radius: 10px;
+    padding: 2%;
+}
+
+@media screen and (max-width:700px) {
+    .secAbout {
+        flex-direction: column;
+    }
+    .conAbout {
+        font-size: 2vmax;
+        height: 100vmax;
+    }
+}
+    
+/*-----------fav section-------*/
+.favText {
+    position: absolute;
+    height: 60vmin;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 2.8vmin;
+}
+
+.favText>p {
+    text-align: center;
+    border: 2px solid rgba(255, 255, 255, 0.562);
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.76);
+    font-weight: bold;
+    padding: 1.8vmin;
+    background-color: rgba(0, 0, 0, 0.329);
+}
+
+
+@media screen and (max-width:700px) {
+
+    .photo {
+        left: 40%;
+    }
+    .favText {
+        font-size: 3vmin;
+        left: 20%;
+    }
+    .favPics {
+        height: 90%;
+    
+        justify-content: flex-end;
+        align-items: center;
+        overflow: visible;
+    }
+    .traPics1, .traPics2 {
+        height: 100%;
+        justify-content: space-between;
+    }
+
+    .favPics>div>img {
+        width: 25vmin;
+        height: auto;
+    }
+}
+/*------------contact section--------*/
+.secCont {
+    border: 7px double rgba(255, 255, 255, 0.705);
+    border-radius: 20px;
+    height: 50%;
+    width: 70%;
+    text-align: center;
+    text-decoration: none;
+}
+
+.secCont p {
+    position: relative;
+    left: 50%;
+    width: 18vmax;
+    color:rgba(100, 148, 237, 0.788);
+    font-size: 2.5vmax;
+    transform: translate(-50%, 50%);
+    font-weight: bold;
+    border-bottom: 4px solid cornflowerblue;
+    padding: 0px 0px
+}
+
+.eachCont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 60%;
+}
+
+.totalCont {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform: translate(0%, -5%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.totalCont a {
+    text-decoration: none;
+    color:rgba(255, 255, 255, 0.849);
+    background-color: rgba(100, 148, 237, 0.377);
+    border-radius: 12px;
+    border: 3.5px inset rgba(100, 148, 237, 0.466);
+    padding: 3% 12%;
+    margin: 0%;
+    font-size: 1.8vmin;
+    font-weight: bold;
+}
+
+.totalCont a:hover {
+    background-color: rgba(100, 148, 237, 0.151);
+    cursor: pointer;
+}
+section .fa-brands, section .fa-solid {
+    text-decoration: none;
+    padding: 10px;
+    font-size: 6vmin;
+    color: rgba(255, 255, 255, 0.705);
+}
+
+@media screen and (max-width:700px) {
+    section .fa-brands, section .fa-solid {
+        font-size: 6vmin;
+    }
+}
+/*------------footer--------*/
+footer {
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.705);
+    font-size: 13px;
+    width: 100%;
+    background-color: rgba(5, 5, 5, 0.13);
+}
+
+.footerLink {
+    height: 40px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    
+}
+
+footer a {
+    width: 50px;
+    height: 50px;
+}
+
+footer .fa-brands {
+    text-decoration: none;
+    padding: 0;
+    font-size: 23px;
+    color: rgba(255, 255, 255, 0.705);
+}
+
+footer .fa-solid {
+    text-decoration: none;
+    padding: 0;
+    font-size: 23px;
+    color: rgba(255, 255, 255, 0.705);
+}
